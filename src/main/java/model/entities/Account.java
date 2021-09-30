@@ -45,17 +45,17 @@ public class Account {
         this.withlimit = withlimit;
     }
 
-    public void deposit(double amount) {
-        balance += amount;
+    public double deposit(double amount) {
+        return balance += amount;
     }
 
-    public void withdraw(double amount) {
+    public double withdraw(double amount) {
         if (amount > this.withlimit) {
             throw new RuntimeException("the withdraw exceeds Withdraw Limit");
         }
         if (amount > this.balance) {
             throw new RuntimeException("the withdraw exceeds Account balance");
         }
-            this.balance -= amount;
+          return  this.balance -= amount;
     }
 }
