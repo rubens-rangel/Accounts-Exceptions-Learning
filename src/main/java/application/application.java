@@ -21,6 +21,7 @@ public class application {
         System.out.println("Enter the amount for withdraw:");
         double amount = sc.nextInt();
         account.withdraw(amount);
-        System.out.println("New balance:" + balance);
+        System.out.println("New balance:" + account.getBalance());
+        sc.close();
     }
 }
